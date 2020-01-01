@@ -16,13 +16,15 @@ BACKGROUND_COLOR = (200, 200, 200)
 POINTER_SPEED = 5
 POINTER_SIZE = (10, 10)
 
+WORLD_TYPE = "World_1"
+
 FPS = 60
 
 TOTAL_WIDTH = 6400
 TOTAL_HEIGHT = 800
 
 
-COUNT_WIDTH = 20
+COUNT_WIDTH = 30
 COUNT_HEIGHT = 10
 
 
@@ -56,11 +58,10 @@ LEVEL_GENERATOR_SPRITES = {
         "$": "Images\\Blocks\\World_1\\$.png",
         "W": "Images\\Blocks\\World_1\\W.png",
         "V": "Images\\Blocks\\World_1\\V.png",
-        "Spikes": "Images\\Blocks\\World_1\\Spikes.png",
-        "Door_Close": "Images\\Blocks\\World_1\\Door_Close.png",
-        "Key": "Images\\Blocks\\World_1\\Key.png",
-        "Coin": "Images\\Blocks\\World_1\\Coin.png",
-        "Background": "Images\\UI\\BackgroundSummer.png"
+        "S": "Images\\Blocks\\World_1\\S.png", # Spikes
+        "D": "Images\\Blocks\\World_1\\D.png", # Door
+        "K": "Images\\Blocks\\World_1\\K.png", # Key
+        "C": "Images\\Blocks\\World_1\\C.png", # Coin
     },
     "World_2":{
         "1": "Images\\Blocks\\World_2\\1.png",

@@ -33,6 +33,16 @@ class Pointer(pygame.sprite.Sprite):
         elif (keys[pygame.K_w]):
             self.yvel = -self.speed
 
+        if (self.rect.x < 0):
+            self.rect.x = 0
+        elif (self.rect.x > TOTAL_WIDTH):
+            self.rect.x = TOTAL_WIDTH
+
+        if (self.rect.y < 0):
+            self.rect.y = 0
+        elif (self.rect.y > TOTAL_HEIGHT):
+            self.rect.y = TOTAL_HEIGHT
+
         self.rect.x += self.xvel
         self.rect.y += self.yvel
 

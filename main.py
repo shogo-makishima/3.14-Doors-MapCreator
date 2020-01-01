@@ -1,4 +1,4 @@
-import pygame, sys, os
+import pygame, sys, os, json
 from Classes.Settings import *
 from Classes.Pointer import *
 from Classes.Camera import *
@@ -47,6 +47,8 @@ for i in range(2):
 
 
 def GenrateLevel(matrix):
+    level = {"map": None, "type": WORLD_TYPE}
+
     map = []
 
     line = ""
@@ -61,7 +63,10 @@ def GenrateLevel(matrix):
             line = ""
             count = 0
 
-    print(map)
+    level["map"] = map
+
+    with open(f"Levels\\level.json", "w", encoding="utf-8") as file:
+        file.write(json.dumps(level))
 
 
 

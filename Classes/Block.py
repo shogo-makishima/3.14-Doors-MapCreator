@@ -25,7 +25,7 @@ class EmptyBlock(pygame.sprite.Sprite):
         #  and self.lastPointer == 1)
         if (self.OnButton() and bool(pygame.mouse.get_pressed()[0] == 1)):
             if (Tools.selectedTool == "Paint"):
-                self.image = pygame.image.load(LEVEL_GENERATOR_SPRITES["World_1"][Tools.Paint.imageName])
+                self.image = pygame.image.load(LEVEL_GENERATOR_SPRITES[WORLD_TYPE][Tools.Paint.imageName])
                 self.name = Tools.Paint.imageName
                 self.image = pygame.transform.scale(self.image, BLOCK_SIZE)
             elif (Tools.selectedTool == "Earse"):
@@ -50,7 +50,7 @@ class TileBlock(pygame.sprite.Sprite):
         if (name in EDITOR_SPRITES.keys()):
             self.image = pygame.image.load(EDITOR_SPRITES[name])
         else:
-            self.image = pygame.image.load(LEVEL_GENERATOR_SPRITES["World_1"][name])
+            self.image = pygame.image.load(LEVEL_GENERATOR_SPRITES[WORLD_TYPE][name])
         self.image = pygame.transform.scale(self.image, TILE_SIZE)
         self.rect = self.image.get_rect()
         self.rect.y = y
