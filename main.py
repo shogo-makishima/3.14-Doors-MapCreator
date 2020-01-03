@@ -50,16 +50,14 @@ def GenrateLevel(matrix):
     map = []
 
     line = ""
-    count = 0
-    for block in matrix:
-        if (count < COUNT_WIDTH - 1):
+    for block in self.matrix:
+        if (len(line) < COUNT_WIDTH - 1):
             line += block.name if (block.name != "EmptyBlock") else " "
-            count += 1
         else:
+            line += block.name if (block.name != "EmptyBlock") else " "
             line += "|"
             map.append(line)
             line = ""
-            count = 0
 
     print(map)
 
